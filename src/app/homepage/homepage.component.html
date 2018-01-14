@@ -1,0 +1,30 @@
+<div class="col-md-9">
+  <div class="col-md-3">
+    Username
+  </div>
+  <div class="col-md-6">
+    <div class="jumbotron">
+<div class="form-group">
+
+<form [formGroup] = "diaryForm">
+  <textarea class="form-control" rows="5" name="diaryText" formControlName="diaryText">
+  </textarea>
+  <br>
+  <select class="form-control" name="language" formControlName="language">
+    <option value="en">English</option>
+    <option value="ro">Romana</option>
+  </select>
+  <br>
+  <br>
+  <button class="btn btn-primary" (click)="onSubmit()">Save in database</button>
+  <br>
+  <br>
+  <button class="btn btn-primary" (click)="translate()">Translate</button>
+  <br>
+  <br>
+  <button class="btn btn-primary" (click)="getDiaryFromDb()">Refresh</button>
+</form>
+</div>
+</div>
+</div>
+</div>
